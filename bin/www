@@ -1,13 +1,7 @@
 #!/usr/bin/nodejs
-var debug = require('debug')('my-application');
 var app = require('../app');
-var fs = require("fs");
-var https = require("https");
 var http = require("http");
-const httpsOptions = {
-    key: fs.readFileSync("./keys/key.pem"),
-    cert: fs.readFileSync("./keys/cert.pem")
-}
+
 
 app.set('port', process.env.PORT || 3000);
 
